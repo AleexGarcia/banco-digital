@@ -54,7 +54,7 @@ public abstract class Conta {
 	}
 	
 	public void imprimirExtrato() {
-		System.out.println(String.format("Titular: %s\nN°: %d\nAgencia: %d\nSaldo: %.2f ",getCliente().nome, getNumero(),getAgencia(), getSaldo()));
+		System.out.println(String.format("Titular: %s\nN°: %d\nAgencia: %d\nSaldo: %.2f ",getCliente().getNome(), getNumero(),getAgencia(), getSaldo()));
 	}
 
 	
