@@ -38,8 +38,7 @@ public class Cliente {
 		endereco.setBairro(bairro);
 		endereco.setCep(cep);
 	}
-	public void imprimirDadosDoCliente() {
-		System.out.println("-------------- Informações do cliente --------------");
+	void imprimirDados() {
 		System.out.println("Nome: "+getNome());
 		System.out.println("Identidade: "+getIdentidade());
 		System.out.println("Cpf: "+getCpf());

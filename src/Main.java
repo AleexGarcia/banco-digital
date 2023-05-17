@@ -6,7 +6,22 @@ public class Main {
 		Conta cc = new ContaCorrente(alex);
 		Conta cp = new ContaPoupanca(alex);
 		cc.imprimirExtrato();
+		cc.depositar(250);
+		cc.imprimirExtrato();
+		cc.transferir(120, cp);
 		cp.imprimirExtrato();
-		cc.getCliente().imprimirDadosDoCliente();
+		cc.imprimirDadosDoCliente();
+		System.out.println("\n-------------Testes no objeto BANCO TESTE-----------\n");
+		Banco bancoTeste = new Banco("Banco Teste");
+		bancoTeste.addNovaConta(cp);
+		bancoTeste.addNovaConta(cp);
+		bancoTeste.addNovaConta(cc);
+		System.out.println("Numero de contas cadastradas: "+ bancoTeste.numeroDeContasCadastrada());
+		bancoTeste.removeConta(cc);
+		System.out.println("Numero de contas cadastradas: "+bancoTeste.numeroDeContasCadastrada());
+		bancoTeste.addNovaConta(cc);
+		bancoTeste.imprimeClientesCadastrados();
+		
+
 	}
 }
